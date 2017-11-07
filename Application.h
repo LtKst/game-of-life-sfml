@@ -11,6 +11,7 @@ class Application {
 
 	Key rKey = Key(sf::Keyboard::R);
 	Key pKey = Key(sf::Keyboard::P);
+	Key qKey = Key(sf::Keyboard::Q);
 
 	Cell cells[35][35];
 

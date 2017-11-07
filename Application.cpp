@@ -1,10 +1,9 @@
-#include <SFML/Graphics.hpp>
 #include "Application.h"
 
 void Application::run() {
 	srand(time(0));
 
-	printf("Press 'r' to randomize\nPress 'p' to pause or unpause\n");
+	printf("Press 'r' to randomize\nPress 'p' to pause or unpause\nPress 'q' to close");
 
 	create();
 
@@ -152,5 +151,10 @@ void Application::checkInput() {
 		paused = !paused;
 
 		printf(paused ? "Paused\n" : "Unpaused\n");
+	}
+
+	// check if the user closed the program
+	if (qKey.getKeyDown()) {
+		window.close();
 	}
 }
