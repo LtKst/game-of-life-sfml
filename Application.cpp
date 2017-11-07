@@ -146,6 +146,16 @@ void Application::checkInput() {
 		printf("Randomized\n");
 	}
 
+	if (cKey.getKeyDown()) {
+		for (int i = 0; i < columnLength; i++) {
+			for (int j = 0; j < rowHeight; j++) {
+				cells[i][j].setAlive(false);
+			}
+		}
+
+		printf("Cleared\n");
+	}
+
 	// check if the user paused
 	if (pKey.getKeyDown()) {
 		paused = !paused;

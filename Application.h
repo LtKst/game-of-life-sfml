@@ -10,6 +10,7 @@ class Application {
 	MouseButton leftMouseButton = MouseButton(sf::Mouse::Left);
 
 	Key rKey = Key(sf::Keyboard::R);
+	Key cKey = Key(sf::Keyboard::C);
 	Key pKey = Key(sf::Keyboard::P);
 	Key qKey = Key(sf::Keyboard::Q);
 
