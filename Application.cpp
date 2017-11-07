@@ -114,7 +114,7 @@ void Application::drawCells() {
 
 void Application::checkInput() {
 	// check if user clicked on a cell
-	if (!mouseButtonPressed && sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
+	if (leftMouseButton.getButtonDown()) {
 		for (int i = 0; i < columnLength; i++) {
 			for (int j = 0; j < rowHeight; j++) {
 				if (sf::Mouse::getPosition(window).x >= cells[i][j].cellShape().getPosition().x
@@ -130,15 +130,10 @@ void Application::checkInput() {
 				}
 			}
 		}
-
-		mouseButtonPressed = true;
-	}
-	else if (!sf::Mouse::isButtonPressed(sf::Mouse::Left)) {
-		mouseButtonPressed = false;
 	}
 
 	// check if the user randomized
-	if (!rPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
+	if (rKey.getKeyDown()) {
 		for (int i = 0; i < columnLength; i++) {
 			for (int j = 0; j < rowHeight; j++) {
 				cells[i][j].create(10 + 20 * i, 10 + 20 * j, 20, 20);
@@ -150,22 +145,12 @@ void Application::checkInput() {
 		}
 
 		printf("Randomized\n");
-
-		rPressed = true;
-	}
-	else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::R)) {
-		rPressed = false;
 	}
 
 	// check if the user paused
-	if (!pPressed && sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
+	if (pKey.getKeyDown()) {
 		paused = !paused;
 
 		printf(paused ? "Paused\n" : "Unpaused\n");
-
-		pPressed = true;
-	}
-	else if (!sf::Keyboard::isKeyPressed(sf::Keyboard::P)) {
-		pPressed = false;
 	}
 }

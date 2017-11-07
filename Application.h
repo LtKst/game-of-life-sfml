@@ -1,9 +1,16 @@
+#include "MouseButton.h"
+#include "Key.h"
 #include "Cell.h"
 
 class Application {
 	sf::RenderWindow window;
 	sf::Event event;
 	sf::Clock clock;
+
+	MouseButton leftMouseButton = MouseButton(sf::Mouse::Left);
+
+	Key rKey = Key(sf::Keyboard::R);
+	Key pKey = Key(sf::Keyboard::P);
 
 	Cell cells[35][35];
 
@@ -14,9 +21,6 @@ class Application {
 
 	bool paused;
 	bool ranGeneration;
-	bool mouseButtonPressed;
-	bool rPressed;
-	bool pPressed;
 
 	void create();
 	void loop();

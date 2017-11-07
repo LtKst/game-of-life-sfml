@@ -1,4 +1,4 @@
-#include "Cell.h"
+  #include "Cell.h"
 
 void Cell::create(float posX, float posY, float sizeX, float sizeY) {
 	x = posX;
