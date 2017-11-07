@@ -23,11 +23,6 @@ void Application::run() {
 
 void Application::create() {
 	window.create(sf::VideoMode(720, 720), "Conway's Game of Life", sf::Style::Titlebar | sf::Style::Close);
-
-	sf::Image icon;
-	icon.loadFromFile("data/icon.png");
-
-	window.setIcon(224, 224, icon.getPixelsPtr());
 }
 
 void Application::generateGrid() {
