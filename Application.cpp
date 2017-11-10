@@ -3,7 +3,7 @@
 void Application::run() {
 	srand(time(0));
 
-	printf("Press 'r' to randomize\nPress 'c' to clear the grid\nPress 'p' to pause or unpause\nPress 'q' to close");
+	printf("Press 'r' to randomize\nPress 'c' to clear the grid\nPress 'p' to pause or unpause\nPress 'q' to close\n");
 
 	create();
 
